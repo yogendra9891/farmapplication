@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/components/com_farmapp/models/fields">
+		<field name="name" type="text" class="inputbox required"
+			size="20" label="Name"
+			description="Name of Activity" required="true" />
+
+		<field name="description" type="textarea" class="inputbox"
+			 label="Description"
+			description="description" rows="3" cols="30" />
+
+
+		<field name="date_of_activity" type="calendar" class="required date"
+			size="10" label="Date of Activity"
+			description="Date of Activity" required="true" format="%Y-%m-%d"/>
+
+		<field name="duration" type="text" class="inputbox int"
+			size="20" label="Duration(hours)"
+			description="Duration of Activity" required="" />
+		
+		<field name="farm" type="farms" class="inputbox"
+			size="1" label="Farm" required="true"
+			description="Select the farm" >
+			<option
+				value="0">Select</option>
+		</field>
+
+		<field name="crop" type="crops" class="required list"
+			size="1" label="Crop" required="true"
+			description="Select the crop" >
+			<option
+				value="0">Select Crop</option>
+		</field>
+
+		<field name="zone" type="Zones" class="required list"
+			size="1" label="Zone" required="true"
+			description="Select the Zone" >
+			<option
+				value="0">Select Zone</option>
+		</field>
+
+		<field name="bed" type="Beds" class="required list"
+			size="1" label="Bed" required="true"
+			description="Select the Bed" >
+			<option
+				value="0">Select Bed</option>
+		</field>
+
+		<field name="notes" type="textarea" class="inputbox"
+			size="40" label="Notes"
+			description="Notes" rows="3" cols="30"/>
+
+		<field name="activity_status" type="list" class="inputbox"
+			size="1" label="Activity Status" required="true"
+			description="Select the Activity" >
+			<option
+				value="0">Select Status of Activity</option>
+		</field>
+
+	<field
+		name="access"
+		type="accesslevel"
+		label="JFIELD_ACCESS_LABEL"
+		description="JFIELD_ACCESS_DESC"
+		class="inputbox"/>
+		
+		<field
+			name="status"
+			type="list"
+			label="JSTATUS"
+			description="status of the Activity"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">JPUBLISHED</option>
+			<option
+				value="0">JUNPUBLISHED</option>
+		</field>
+
+
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="Language of the zone"
+			class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="id" type="text" default="0" label="Id"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+
+		<field name="activity_type" type="list" class="inputbox"
+			size="1" label="Type of Activity"
+			description="Select the activity type" >
+			<option
+				value="0">Select</option>
+		</field>
+		
+		<field name="activity_mode" type="list" class="inputbox"
+			size="1" label="Mode"
+			description="Select the activity mode" >
+			<option
+				value="0">Select</option>
+		</field>
+
+		<field name="quantity" type="text" class="inputbox"
+			size="10" label="Quantity"
+			description="Quantity" />
+
+		<field name="unit_of_measure" type="list" class="inputbox"
+			size="1" label="Unit of Measure"
+			description="Select the unit of Measure" >
+			<option
+				value="0">Select</option>
+		</field>
+
+		<field name="labor_category_id" type="labor" class="inputbox"
+			size="1" label="Labor category"
+			description="Select the labor category" >
+			<option
+				value="0">Select</option>
+		</field>
+
+		<field name="cost" type="text" class="inputbox"
+			size="10" label="Cost per Hour(USD)"
+			description="Cost" />
+
+		<field name="material_cost" type="text" class="inputbox"
+			size="10" label="Cost Paid per Unit(USD)"
+			description="Cost Paid per Unit(USD)" />
+
+		<field name="date_of_purchase" type="calendar" class="inputbox"
+			size="13" label="Date of Purchase"
+			description="date of Purchase" format="%Y-%m-%d"/>
+
+		<field name="vendor" type="text" class="inputbox"
+			size="13" label="Vendor"
+			description="Vendor" />
+
+		<field name="order_no" type="text" class="inputbox"
+			size="13" label="P.O.Number/Order Number"
+			description="Order No." />
+
+	</fieldset>
+
+
+</form>

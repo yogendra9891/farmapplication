@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_farmapp/models/fields">
+		<field name="farm" type="list" class="inputbox" 
+			size="1" label="Farm" 
+			description="Farm" required="true">
+			<option
+				value="0">Select Farm</option>
+		</field>
+
+		<field name="startdate" type="calendar" class="inputbox" format="%Y-%m-%d"
+			 label="Start Date"
+			description="Start Date" />
+			
+		<field name="enddate" type="calendar" class="inputbox" format="%Y-%m-%d"
+			 label="End Date"
+			description="End Date" />
+
+		<field name="crop" type="crops" class="inputbox" 
+			size="1" label="Crop" 
+			description="Crop" required="true">
+			<option
+				value="0">Select Crop</option>
+		</field>
+		
+			
+		<field name="zone" type="list" class="inputbox"
+			size="1" label="Zone"
+			description="Zone">
+			<option
+				value="0">Select Zone</option>
+		</field>
+		
+			
+		<field name="bed" type="list" class="inputbox"
+			size="1" label="Beds"
+			description="Beds">
+			<option
+				value="0">Select Bed</option>
+		</field>
+		
+		<field name="submit" type="button" 
+			 label="Submit"
+			description="Submit"/>
+			
+
+
+	</fieldset>
+
+
+</form>

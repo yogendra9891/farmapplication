@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/components/com_farmapp/models/fields">
+		<field name="name" type="text" class="inputbox"
+			size="20" label="Name"
+			description="Name of Zone" required="true" />
+
+		<field name="description" type="text" class="inputbox"
+			size="20" label="Description"
+			description="description"/>
+			
+		<field name="image" type="media" directory="farmapp"
+				hide_none="1" label="Image"
+				size="30"
+				description="Image" created_by_field="691" asset_id="com_user"/>
+		
+		
+		<field name="notes" type="textarea" class="inputbox"
+			label="Notes"
+			description="notes" />
+			
+		
+		<field
+			name="status"
+			type="list"
+			label="JSTATUS"
+			description="status of the zone"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">JPUBLISHED</option>
+			<option
+				value="0">JUNPUBLISHED</option>
+		</field>
+
+
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="Language of the zone"
+			class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="id" type="text" default="0" label="Id"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+
+
+	</fieldset>
+
+	<fields name="options">
+		<fieldset name="joptions" label="Options">
+			
+
+         	</fieldset>
+	</fields>
+
+</form>

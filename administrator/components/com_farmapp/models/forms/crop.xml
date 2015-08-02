@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_farmapp/models/fields">
+		<field name="name" type="text" class="inputbox"
+			size="40" label="Name"
+			description="Name of Crop" required="true" />
+
+		<field name="description" type="textarea" class="inputbox"
+			size="40" label="Description"
+			description="Description" rows="3" cols="30"/>
+
+		<field name="farmzonecrop" type="Farmzonecrop" class="inputbox"
+			size="1" label="Farm/zone"
+			description="Select the farm" required="true">
+			<option
+				value="0">Select</option>
+		</field>
+
+		<field id="bed_id" name="bed_id" type="list" class="inputbox" 
+			size="5" label="Beds"
+			description="Select the Bed" required="true"  multiple="multiple"/>
+
+		
+		<field name="plant_variety_id" type="plants" class="inputbox"
+			size="1" label="Plant Variety"
+			description="Select the plant" >
+			<option
+				value="0">Select</option>
+		</field>
+		
+		<field name="notes" type="textarea" class="inputbox"
+			size="40" label="Notes"
+			description="Notes" rows="3" cols="30"/>
+			
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC" class="inputbox" size="1" />
+			
+		<field
+			name="status"
+			type="list"
+			label="JSTATUS"
+			description="status of the crop"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">JPUBLISHED</option>
+			<option
+				value="0">JUNPUBLISHED</option>
+		</field>
+
+
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="Language of the farm"
+			class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="id" type="text" default="0" label="Id"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+
+			<field name="quantity" type="text"
+				 label="Quantity"
+				description="quantity of the crop" />
+
+		<field name="unit" type="list" class="inputbox"
+			size="1" label="Unit"
+			description="Select the Unit" >
+			<option
+				value="0">Select Unit</option>
+		</field>
+
+			<field name="total_income" type="text"
+				 label="Total Income(USD)"
+				description="Unit of the crop" />
+
+	</fieldset>
+
+
+
+	<fields name="options">
+		<fieldset name="joptions" label="Options">
+			
+
+         	</fieldset>
+	</fields>
+		
+</form>

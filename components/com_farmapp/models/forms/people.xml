@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/components/com_farmapp/models/fields">
+		<field name="name" type="text" class="inputbox"
+			size="20" label="Name"
+			description="Name of Farm" required="true" />
+
+		<field name="title" type="text" class="inputbox"
+			size="20" label="Title"
+			description="title" required="true"/>
+		
+		<field name="employee_since" type="calendar" label="Employee Since"
+			description="Employee Since" class="inputbox" size="15"
+			format="%Y-%m-%d %H:%M" />
+
+		<field name="notes" type="textarea" class="inputbox"
+			size="20" label="Notes"
+			description="Notes" required="true"/>
+		
+		<field name="labor_category" type="Labor" class="inputbox"
+			size="1" label="Labor Category"
+			description="Labor Category" />
+			
+			<field name="farm" type="farms" class="inputbox"
+			size="1" label="Farm"
+			description="Farm" />
+		
+		
+		<field
+			name="status"
+			type="list"
+			label="JSTATUS"
+			description="status of the people"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">JPUBLISHED</option>
+			<option
+				value="0">JUNPUBLISHED</option>
+		</field>
+
+
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="Language of the farm"
+			class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="id" type="text" default="0" label="Id"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+	</fieldset>
+	
+		<fieldset name="contact_info" label="Contact Information">
+			<field name="telephone" type="text"
+				 label="Telephone" size="15"
+				 class="inputbox int"
+				description="Telephone"/>
+
+			<field name="mobile" type="text" class="inputbox int"
+				 label="Cell" size="15"
+				description="Mobile" />
+
+			<field name="address" type="text"
+				 label="Mailing Address" size="15"
+				description="Mailing Address" />
+				
+			<field name="email" type="text"
+				 label="Email Address" size="15"
+				description="Email Address" />
+ 
+	</fieldset>
+
+	
+		<fieldset name="biography" label="Biography">
+			<field name="bio" type="textarea"
+				 label="Biography"
+				 class="inputbox"
+				description="Biography"/>
+
+			<field name="picture" type="media" directory="farmapp/employee"
+				hide_none="1"
+				 label="Picture"
+				description="Picture"  class="inputbox"/>
+
+         	</fieldset>
+
+</form>

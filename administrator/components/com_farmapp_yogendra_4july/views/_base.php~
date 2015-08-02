@@ -1,0 +1,77 @@
+<?php
+
+
+/** ensure this file is being included by a parent file */
+defined('_JEXEC') or die('Restricted access');
+
+jimport( 'joomla.application.component.view' );
+
+class FarmViewBase extends JView
+{
+ 	/*
+	 * Submenu list
+	 */
+	protected $_subMenu=array('farms'=>'Farms');
+	
+	/**
+	 * Gets the default submenu bar
+	 * @return array
+	 */
+	function getMenubar()
+	{
+		$layout = $this->getLayout();
+		$viewname = ucfirst(JRequest::getVar('view', 'farms'));
+		switch(strtolower($layout))
+		{
+			case "form":
+				JToolBarHelper::title(JText::_('Q2 Farm App: New'.$viewname), 'generic.png');
+				$this->setSubMenu();
+				JToolBarHelper::save('save');
+				JToolBarHelper::apply('apply');
+				JToolBarHelper::cancel();
+				break;
+			case "default":
+		    	JToolBarHelper::title(JText::_('Q2 Farm App: '.$viewname), 'generic.png');
+		    	$this->setSubMenu();
+		        JToolBarHelper::addNewX('farm.add');
+		        JToolBarHelper::editListX('farm.edit');
+		        JToolBarHelper::trash();
+		        JToolBarHelper::divider();
+		        JToolBarHelper::publish();
+			    JToolBarHelper::unpublish();
+		        JToolBarHelper::divider();
+		        JToolBarHelper::preferences('com_farm');
+      	        break;
+				Default:
+		    	JToolBarHelper::title(JText::_('Q2 Farm App'), 'generic.png');
+		    	$this->setSubMenu();
+		        JToolBarHelper::addNewX();
+		        JToolBarHelper::editListX();
+		        JToolBarHelper::divider();
+		        JToolBarHelper::deleteList();
+		  }
+	}
+   
+/*
+    * set sub menu on view
+    * 
+    * @param None
+    * @return 
+    */	
+   protected function setSubMenu()
+   {		
+		foreach($this->_subMenu as $key => $val)
+		{
+			$current = strtolower( JRequest::getVar('view', 'farms') );
+			//echo $current;
+			$active = ($key == $current );
+			echo $current;
+			JSubMenuHelper::addEntry(JText::_($val), 'index.php?option=com_farm&view='.$key, $active );
+		} 
+	}
+
+	
+	
+}
+	
+	

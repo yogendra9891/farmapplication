@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_farmapp/models/fields">
+		<field name="name" type="text" class="inputbox"
+			size="40" label="JGLOBAL_NAME"
+			description="Name of Farm" required="true" />
+
+		<field name="street1" type="text" class="inputbox"
+			size="40" label="Street Address 1"
+			description="Street address 1" required="true"/>
+		<field name="street2" type="text" class="inputbox"
+			size="40" label="Street Address 2"
+			description="Street address 1" required="true"/>
+		<field name="city" type="text" class="inputbox"
+			size="40" label="City"
+			description="city" required="true"/>
+
+		<field name="state" type="text" class="inputbox"
+			size="40" label="State"
+			description="state" required="true"/>
+		<field name="postal_code" type="text" class="inputbox"
+			size="20" label="Postal Code"
+			description="state" required="true"/>
+		<field name="telephone" type="text" class="inputbox"
+			size="20" label="Telephone"
+			description="Telephone" required="true"/>
+		<field name="email_address" type="text" class="inputbox"
+			size="20" label="Email Address"
+			description="email address" validate="email" required="true"/>
+
+		<field name="website_url" type="text" class="inputbox"
+			size="60" label="Web Address"
+			description="web address" required="true"/>
+		<field name="hours_of_operation" type="text" class="inputbox"
+			size="60" label="Hours of Operation"
+			description="Hours of Operation" required="true"/>
+
+
+		<field
+			name="status"
+			type="list"
+			label="JSTATUS"
+			description="status of the farm"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option
+				value="1">JPUBLISHED</option>
+			<option
+				value="0">JUNPUBLISHED</option>
+		</field>
+
+
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="Language of the farm"
+			class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="id" type="text" default="0" label="Id"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+
+			<field name="description" type="textarea"
+				 label="Description"
+				description="Description of the farm" rows="3" cols="30"/>
+
+			<field name="history" type="textarea"
+				 label="History"
+				description="History of the Farm" rows="3" cols="30"/>
+
+			<field name="date_founded" type="text"
+				 label="Date Founded"
+				description="Date Founded of the Farm" />
+ 
+	</fieldset>
+
+	<fields name="keywords_tags">
+		<fieldset name="Jkeywords_tags" label="Keywords Tag">
+			<field name="html_meta_tags" type="textarea"
+				 label="Html Meta Tags"
+				description="Html Meta Tags" rows="3" cols="30"/>
+
+			<field name="specialities" type="textarea"
+				 label="specialities"
+				description="Specialities" rows="3" cols="30"/>
+
+         	</fieldset>
+	</fields>
+
+	<fields name="social_media_links">
+		<fieldset name="jsocial_media_links" label="Social Media Links">
+			<field name="facebook" type="text"
+				 label="Facebook Link"
+				description="Facebook link" />
+
+			<field name="twitter" type="text"
+				 label="Twitter"
+				description="Twitter Link" />
+
+			<field name="linkedin" type="text"
+				 label="Linked In"
+				description="Linked In" />
+
+		</fieldset>
+	</fields>
+</form>
